@@ -54,7 +54,7 @@ STATE_COLOR = {"Free": "#d4edda", "Booked": "#f8d7da", "Maintenance": "#ffe5b4",
 
 @st.cache_resource
 def db():
-        url = st.secrets["SUPABASE_URL"].strip().split("/rest/")[0].rstrip("/")
+    url = st.secrets["SUPABASE_URL"].strip().split("/rest/")[0].rstrip("/")
     return create_client(url, st.secrets["SUPABASE_KEY"].strip())
 
 
